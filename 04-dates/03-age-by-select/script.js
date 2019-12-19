@@ -10,7 +10,9 @@
 // You will have time to focus on it later.
 
 (function() {
+var dobDay = document.getElementById("dob-day").value;
+var dobMonth = document.getElementById("dob-month").value;
+var dobYear = document.getElementById("dob-year").value;
 
-    // your code here
 
 })();
