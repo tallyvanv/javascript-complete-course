@@ -88,7 +88,14 @@
             email: "gkeatche@google.fr",
         },
     ];
-
-    // your code here, figure out array of objects
-
+    //fucntion triggered on click
+    document.getElementById("run").addEventListener("click", function() {
+      for (let i=0; i < people.length; i++) {//go over entire loop
+          if (people[i].firstname == "Jean" && people[i].lastname == "Dupont") {
+              //indicate that we need Jean Dupont
+              alert(people[i].email + " index: " + i);
+              //print email and index number (originally people.indexOf(people[i]) for index but shortened)
+          }
+      }
+    })
 })();
