@@ -1,25 +1,16 @@
-/* becode/javascript
- *
- * /04-dates/03-age-by-select/script.js - 4.3: calculateur d'âge
- *
- * coded by leny@BeCode
- * started at 26/10/2018
- */
-
-// NOTE: don't focus on the existing code structure for now.
-// You will have time to focus on it later.
-
 (function() {
+    //run function on click
     document.getElementById("run").addEventListener("click", function() {
-        let dobDay = document.getElementById("dob-day").value;
-        let dobMonth = document.getElementById("dob-month").value;
-        let dobYear = document.getElementById("dob-year").value;
-        let today = new Date();
-        let age = today.getFullYear() - dobYear;
+        let dobDay = document.getElementById("dob-day").value;//get day from selected value
+        let dobMonth = document.getElementById("dob-month").value;//get month from selected value
+        let dobYear = document.getElementById("dob-year").value;//get year from selected value
+        let today = new Date();//today's date to compare to
+        let age = today.getFullYear() - dobYear;//age by checking difference of year of birth to current year
         let m = today.getMonth() - dobMonth;
-        if (m < 0 || (m === 0 && today.getDate() < dobDay)) {
-            age--;
+        //declare variable for month difference to take into account when calculating years
+        if (m < 0 || (m === 0 && today.getDate() < dobDay)) {//check if someone's birthday is earlier than today's date
+            age--;//age decreases if birthday hasn't happened yet
         }
-        alert("Your age is: " + age);
+        alert("Your age is: " + age);//show age
     });
 })();
