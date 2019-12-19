@@ -25,7 +25,10 @@
         "raisin",
         "cerise",
     ];
-
-    // your code here
+    //trigger function onclick
+    document.getElementById("run").addEventListener("click", function() {
+        fruits.forEach(fruit => console.log(fruit));//arrow function for simplification with foreach loop (for each
+        //fruit in array -> console log items
+    })
 
 })();
