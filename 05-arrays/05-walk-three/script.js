@@ -38,7 +38,9 @@
             email: "mcoal4@creativecommons.org",
         },
     ];
-
-    // your code here
-
+    //trigger function on click
+    document.getElementById("run").addEventListener("click", function() {
+        //using a foreach loop to print every first name + last name for each element
+        people.forEach(name => console.log(name.firstname + " " + name.lastname));
+    })
 })();
