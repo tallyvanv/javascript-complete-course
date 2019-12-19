@@ -10,20 +10,26 @@
 // You will have time to focus on it later.
 
 (function() {
+    //trigger function on click
+    document.getElementById("run").addEventListener("click", function() {
+        var fruits = [//create array
+            "pomme",
+            "poire",
+            "fraise",
+            "tomate",
+            "orange",
+            "mandarine",
+            "durian",
+            "pêche",
+            "raisin",
+            "cerise",
+        ];
+        fruits.pop();
+        fruits.shift();
+        fruits.push("kiwi");
+        fruits.unshift("banana");
+        alert(fruits);
 
-    var fruits = [
-        "pomme",
-        "poire",
-        "fraise",
-        "tomate",
-        "orange",
-        "mandarine",
-        "durian",
-        "pêche",
-        "raisin",
-        "cerise",
-    ];
-
-    // your code here
+    });
 
 })();
