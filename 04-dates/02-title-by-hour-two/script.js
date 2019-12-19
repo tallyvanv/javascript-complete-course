@@ -1,18 +1,20 @@
-/* becode/javascript
- *
- * /04-dates/02-title-by-hour-two/script.js - 4.2: texte en fonction de l'heure (2)
- *
- * coded by leny@BeCode
- * started at 26/10/2018
- */
 
-// NOTE: don't focus on the existing code structure for now.
-// You will have time to focus on it later.
 
 (function() {
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
-    // your code here
+    let d = new Date();
+    //d.setHours(19); -> set the hour for testing purposes
+    let currentHour = d.getHours(); //will get the hours as an integer between 0-23
+
+    if (currentHour < 18) //If the time is before 18h
+    {
+        document.getElementById("target").innerHTML = "<i>Hello</i>";
+        //gets the inner html of div with id target and changes content
+    } else {
+        document.getElementById("target").innerHTML = "<i>Good evening</i>";
+        //cf. supra
+    }
 
 })();
