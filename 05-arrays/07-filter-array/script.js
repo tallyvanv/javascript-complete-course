@@ -92,8 +92,10 @@
     document.getElementById("run").addEventListener("click", function() {
 
         let filtered = people.filter(function(person) {
+            //declare variable new array with filter method (person as parameter)
             return person.age >= 18;
+            //return all elements with age over 18
         });
-        console.log(filtered);
+        console.log(filtered);//display new filter in console
     })
 })();
