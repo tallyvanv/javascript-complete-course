@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
@@ -9,9 +9,10 @@
     if (currentHour < 18) //If the time is before 18h
     {
         document.getElementById("target").innerHTML = "<i>Hello</i>";
-    }
-    else {
+        //gets the inner html of div with id target and changes content
+    } else {
         document.getElementById("target").innerHTML = "<i>Good evening</i>";
+        //cf. supra
     }
 
 })();
