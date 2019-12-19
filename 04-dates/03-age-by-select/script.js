@@ -9,6 +9,7 @@
         let m = today.getMonth() - dobMonth;
         //declare variable for month difference to take into account when calculating years
         if (m < 0 || (m === 0 && today.getDate() < dobDay)) {//check if someone's birthday is earlier than today's date
+            //if month gets in negative or we're in birthday month but day of birth hasn't happened yet
             age--;//age decreases if birthday hasn't happened yet
         }
         alert("Your age is: " + age);//show age
