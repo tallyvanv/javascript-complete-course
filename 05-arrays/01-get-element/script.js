@@ -1,5 +1,6 @@
 
 (function() {
+    //trigger function on click
     document.getElementById("run").addEventListener("click", function() {
         var fruits = [
             "apple",
@@ -15,7 +16,7 @@
             "grap",
             "cherry",
         ];
-        alert(fruits[3]);
+        alert(fruits[3]);//arrays count from 0
     });
 
 

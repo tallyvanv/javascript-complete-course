@@ -24,10 +24,10 @@
             "raisin",
             "cerise",
         ];
-        fruits.pop();
-        fruits.shift();
-        fruits.push("kiwi");
-        fruits.unshift("banana");
+        fruits.pop();//removes last element
+        fruits.shift();//removes first element
+        fruits.push("kiwi");//adds kiwi element to end
+        fruits.unshift("banana");//adds banana element to beginning
         alert(fruits);
 
     });
