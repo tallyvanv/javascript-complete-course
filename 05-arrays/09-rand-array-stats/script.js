@@ -4,9 +4,11 @@
     //trigger on click
     document.getElementById("run").addEventListener("click", function() {
         //iterate over entire array
-        for (i=0; i < myNumbers.length; i++) {
-
+        let i;
+        for (i=1; i <= myNumbers.length; i++) {
+            let cellId = 'n-' +i;
+            document.getElementById(cellId).innerHTML = myNumbers[i-1];
         }
+        const arrMax = myNumbers => Math.max(...arr);
     })
-
 })();
