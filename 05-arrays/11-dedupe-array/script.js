@@ -28,6 +28,7 @@
         "cerise",
     ];
 
-    // your code here
-
+    document.getElementById("run").addEventListener("click", function() {
+        console.log([...new Set(fruits)])//use set bc set is a set of values, therefore each value only occurs once
+    })
 })();
