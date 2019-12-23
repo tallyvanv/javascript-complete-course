@@ -11,6 +11,6 @@
 
 (function() {
 
-    // your code here
+    document.querySelector("#target").innerHTML = "owned";//just replace with the query seleeecta
 
 })();
