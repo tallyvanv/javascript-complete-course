@@ -92,8 +92,10 @@
     //trigger on click
     document.getElementById("run").addEventListener("click", function() {
         let total = people.reduce(function (sum, person) {//introduce reduce to transform our array
-            return sum + person.age
-        }, 0);
+            //add arguments to function
+            return sum + person.age //start at zero and keep adding sum,
+            // return value to be passed as sum in next iteration
+        }, 0);//reduce needs an object (starting point for our sum=0))
         console.log(total);
     })
 })();
