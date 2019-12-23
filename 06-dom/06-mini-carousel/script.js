@@ -19,6 +19,18 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    let i = 0;
+
+    document.getElementById("next").addEventListener("click", function () {
+
+        let imgSource = document.getElementsByTagName("img");
+
+        if (i === 5) {
+            i = 0}
+
+        imgSource[0].setAttribute("src", gallery[i]);
+
+        i++;
+    });
 
 })();
