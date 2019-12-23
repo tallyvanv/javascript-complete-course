@@ -23,14 +23,14 @@
 
     document.getElementById("next").addEventListener("click", function () {
 
-        let imgSource = document.getElementsByTagName("img");
+        let imgSource = document.getElementsByTagName("img");//define var for img element
 
-        if (i === 5) {
+        if (i === gallery.length - 1) {//if we're at the end of the arrary
             i = 0}
 
-        imgSource[0].setAttribute("src", gallery[i]);
+        imgSource[0].setAttribute("src", gallery[i]);//set src attribute to current element in array
 
-        i++;
+        i++;//increase index number on click
     });
 
 })();
