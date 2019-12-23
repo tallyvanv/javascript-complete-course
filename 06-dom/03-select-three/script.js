@@ -11,6 +11,10 @@
 
 (function() {
 
-    // your code here
+    let x = document.querySelectorAll(".target");//create variable that selects all .target items
+    let i;
+    for (i = 0; i < x.length; i++) {//iterate over all items with class target
+        x[i].innerHTML = "ownéd";//change innerhtml of said items
+    }
 
 })();
