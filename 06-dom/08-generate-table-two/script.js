@@ -17,13 +17,13 @@
         let tbl = document.createElement('table'); //var for a table
         let tbdy = document.createElement('tbody'); //var for table body
 
-        for (var i = 1; i < 11; i++) {//iterate 10 times
+        for (var i = 1; i < 11; i++) {//iterate 10 times, start from one for the table values
             let tr = document.createElement('tr');//create table row
             tbdy.appendChild(tr);//append row to table body
             for (var j = 1; j < 11; j++) {//create cell within
-                let td = tr.insertCell(j-1);
+                let td = tr.insertCell(j-1);//go over right index
                 td.appendChild(document.createTextNode(""));//empty string so it creates the rows
-                td.innerHTML = i * j;
+                td.innerHTML = i * j;//content is multiplication of numbers
             }
         }
         tbl.appendChild(tbdy);
