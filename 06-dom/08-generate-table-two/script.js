@@ -11,6 +11,23 @@
 
 (function() {
 
-    // your code here
+    (function() {
+
+        let target = document.getElementById("target"); //var for the target id
+        let tbl = document.createElement('table'); //var for a table
+        let tbdy = document.createElement('tbody'); //var for table body
+
+        for (var i = 1; i < 11; i++) {//iterate 10 times
+            let tr = document.createElement('tr');//create table row
+            tbdy.appendChild(tr);//append row to table body
+            for (var j = 1; j < 11; j++) {//create cell within
+                let td = tr.insertCell(j-1);
+                td.appendChild(document.createTextNode(""));//empty string so it creates the rows
+                td.innerHTML = i * j;
+            }
+        }
+        tbl.appendChild(tbdy);
+        target.appendChild(tbl)
+    })();
 
 })();
