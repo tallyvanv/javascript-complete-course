@@ -11,6 +11,17 @@
 
 (function() {
 
-    // your code here
-
+    document.getElementById("pass-one").addEventListener("keydown", function() {
+        let numbers = /\d/g;//define a digit regExp
+        if (document.getElementById("pass-one").value.length >= 8//string longer than 8 characters
+            && document.getElementById("pass-one").value.match(numbers)) {
+            //use match to check if string contains numbers
+            document.getElementById("validity").innerHTML = "ok";
+            //change span to ok
+        }
+        else {
+            document.getElementById("validity").innerHTML = "not ok";
+            //if the condition is not met: "not ok"
+        }
+    })
 })();
