@@ -11,6 +11,9 @@
 
 (function() {
 
-    // your code here
-
+    let str = document.getElementById("target").innerHTML;
+    let wavey = str.split("");
+    for (let i=0; i < wavey.length; i++) {
+        if (i=)
+    }
 })();
