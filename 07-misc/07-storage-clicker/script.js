@@ -11,6 +11,17 @@
 
 (function() {
 
-    // your code here
+        let boton = document.getElementById("increment");
 
+        let output = document.getElementById("target");
+
+        boton.addEventListener("click", function (){
+            output.innerHTML++;
+            //increase counter
+            localStorage.setItem("numUpdate", output.innerHTML);
+            //save counter in local storage
+        });
+
+        output.innerHTML = localStorage.getItem("numUpdate");
+        //retrieve number in counter from local storage
 })();
