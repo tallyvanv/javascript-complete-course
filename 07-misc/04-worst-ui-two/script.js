@@ -19,30 +19,50 @@
     let phonenr = document.getElementById("target");
 
     boton1.onclick = function() {
-        let output1 = (parseInt(boton1.innerText++));
+        if (parseInt(boton1.innerText) < 499) {
+            let output1 = (parseInt(boton1.innerText++));
+        }
+        else {
+            boton1.innerHTML= 460;
+        }
         phonenr.innerHTML = "0" + boton1.innerHTML + boton2.innerHTML + boton3.innerHTML + boton4.innerHTML;
     };
 
     boton2.onclick = function() {
-        let output2 = (parseInt(boton2.innerText++));
-        if (output2 < 9) {
-            boton2.innerHTML = "0" + boton2.innerText;
+        if (parseInt(boton2.innerText) < 99) {
+            let output2 = (parseInt(boton2.innerText++));
+            if (output2 < 10) {
+                boton2.innerHTML = "0" + boton2.innerText;
+            }
+        }
+        else {
+            boton2.innerHTML= "00";
         }
         phonenr.innerHTML = "0" + boton1.innerHTML + boton2.innerHTML + boton3.innerHTML + boton4.innerHTML;
     };
 
     boton3.onclick = function() {
-        let output3 = (parseInt(boton3.innerText++));
-        if (output3 < 9) {
-            boton3.innerHTML = "0" + boton3.innerText;
+        if (parseInt(boton3.innerText) < 99) {
+            let output3 = (parseInt(boton3.innerText++));
+            if (output3 < 10) {
+                boton3.innerHTML = "0" + boton3.innerText;
+            }
+        }
+        else {
+            boton3.innerHTML= "00";
         }
         phonenr.innerHTML = "0" + boton1.innerHTML + boton2.innerHTML + boton3.innerHTML + boton4.innerHTML;
     };
 
     boton4.onclick = function() {
-        let output4 = (parseInt(boton4.innerText++));
-        if (output4 < 9) {
-            boton4.innerHTML = "0" + boton4.innerText;
+        if (parseInt(boton4.innerText) < 99) {
+            let output4 = (parseInt(boton4.innerText++));
+            if (output4 < 10) {
+                boton4.innerHTML = "0" + boton4.innerText;
+            }
+        }
+        else {
+            boton4.innerHTML= "00";
         }
         phonenr.innerHTML = "0" + boton1.innerHTML + boton2.innerHTML + boton3.innerHTML + boton4.innerHTML;
     };
