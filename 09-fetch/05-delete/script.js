@@ -10,5 +10,22 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    const path = "http://localhost:12345/_shared/api.json";
+    async function inputHero() {
+        let newHero = {};//empty hero object
+        const response = await fetch(path);
+        const data = await response.json();
+        console.log(data);
+
+        let input = parseInt(document.getElementById("hero-id").value) - 1;
+        // use splice to remove element
+
+
+        //use findIndex to show first element where hero.id is equal to the input
+        data.heroes.splice(data.heroes.findIndex(function split (hero) {
+            return hero.id == input;
+        }),1);
+        console.log(data);
+    }
+    document.getElementById("run").onclick = function() {inputHero()};//trigger async function on click
 })();
